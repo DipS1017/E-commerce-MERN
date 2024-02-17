@@ -1,15 +1,24 @@
-import React from 'react'
-import {Widget, addResponseMessage} from "react-chat-widget";
+import React, { useEffect } from "react";
+import { Widget, addResponseMessage } from "react-chat-widget";
 
 function AiChatWidget() {
-  const handleMessage=(message)=>{
+  useEffect(() => {
+    addResponseMessage("Welcome to this awesome chat!");
+  }, []);
+
+  const handleMessage = (message) => {
     addResponseMessage(message);
-  }
-  return <>
-  <Widget handleNewUserMessage={handleMessage}/>
-  
-  </>;
-  
+  };
+
+  return (
+    <>
+      <Widget
+        handleNewUserMessage={handleMessage}
+        title="My new awesome title"
+        subtitle="And my cool subtitle"
+      />
+    </>
+  );
 }
 
-export default AiChatWidget
+export default AiChatWidget;

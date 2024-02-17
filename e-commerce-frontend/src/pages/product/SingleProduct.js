@@ -20,8 +20,8 @@ export default function SingleProduct() {
       onSuccess: (res) => {
         toast.success(res?.message);
       },
-      onError: () => {
-        toast.error(error?.res?.data?.message);
+      onError: (error) => {
+        toast.error(error?.response?.data?.message);
       }
     }
   );

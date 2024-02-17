@@ -3,7 +3,7 @@ const Order = require("../models/Order");
 const getOrders = async (req, res) => {
   const { id } = req.auth;
   const orders = await Order.find({
-    userId:id
+    userId: id
   });
   return res.json({
     data: orders

@@ -49,14 +49,15 @@ app.use(
 app.use(
   "/cart",
   [
-      jwt({
-        secret: process.env.SECRET_KEY,
-        algorithms: ["HS256"]
-      })
+    jwt({
+      secret: process.env.SECRET_KEY,
+      algorithms: ["HS256"]
+    })
   ],
   cartRoutes
 );
-app.use("/chat",chatRoutes);
+
+app.use("/chat", chatRoutes);
 
 app.use(function (err, req, res, next) {
   if (err.name === "UnauthorizedError") {

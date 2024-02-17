@@ -12,12 +12,14 @@ import SingleProduct from "./pages/product/SingleProduct";
 import ListOrder from "./pages/dashboard/order/ListOrder";
 import Cart from "./pages/cart";
 import MainLayout from "./layout/MainLayout";
+import AiChatWidget from "./components/AiChatWidget";
+import { Widget } from "react-chat-widget";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element:<MainLayout/>,
+      element: <MainLayout />,
       children: [
         {
           path: "/",
