@@ -1,7 +1,10 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
+  const navigate=useNavigate();
   const onSubmit = (values) => {
     console.log(values);
 
@@ -14,13 +17,14 @@ function Create() {
       body: JSON.stringify(values)
     };
 
-    fetch("http://localhost:8000/auth/create", requestOptions)
+    fetch(`${process.env.REACT_APP_API_URL}/auth/create`, requestOptions)
       .then((res) => {
         if (!res.ok) throw new Error();
-        alert("Successfully Created Account");
+        toast.success("Successfully Created Account");
+       navigate("../login");
       })
       .catch((error) => {
-        alert("Failed to Created Account");
+        toast.error("Failed to Created Account");
       });
   };
 

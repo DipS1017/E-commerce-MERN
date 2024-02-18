@@ -2,7 +2,7 @@ import axios from "axios";
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -19,6 +19,9 @@ function Login() {
         toast.error(error.response.data.message);
       });
   };
+  const navigateToCreateAccount=()=>{
+    navigate("../create");
+  }
 
   return (
     <>
@@ -76,6 +79,12 @@ function Login() {
                     type="submit"
                     className="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     Login
+                  </button>
+                  <button
+                    type="button"
+                    onClick={navigateToCreateAccount}
+                    className="inline-flex items-center px-2 pt-1 text-md font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
+                   Create an Account
                   </button>
                 </div>
               </Form>
