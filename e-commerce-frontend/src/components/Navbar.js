@@ -32,7 +32,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
         <>
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
             <div className="flex justify-between h-16">
               <div className="grid w-full grid-cols-8">
                 <div className="flex items-center flex-shrink-0 col-span-8 sm:col-span-1">

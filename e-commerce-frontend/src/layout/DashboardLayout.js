@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import useCheckToken from "../hooks/useCheckToken";
 
 export default function DashboardLayout() {
@@ -36,21 +36,17 @@ export default function DashboardLayout() {
 
                 <ul className="px-4 mt-2 space-y-1">
                   <li>
-                    <a href="" className="sidebar-item">
+                    <Link to="../dashboard/listproduct"  className="sidebar-item">
                       View
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="" className="sidebar-item">
+                    <Link to="../dashboard/addProduct" className="sidebar-item">
                       Create
-                    </a>
+                    </Link>
                   </li>
 
-                  <li>
-                    <a href="" className="sidebar-item">
-                      Update
-                    </a>
-                  </li>
+                  
                 </ul>
               </details>
             </li>
