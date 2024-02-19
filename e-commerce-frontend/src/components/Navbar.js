@@ -36,7 +36,8 @@ export default function Navbar() {
             <div className="flex justify-between h-16">
               <div className="grid w-full grid-cols-8">
                 <div className="flex items-center flex-shrink-0 col-span-8 sm:col-span-1">
-                  <img
+                  <Link to="/">
+                  <img 
                     className="block w-auto h-8 lg:hidden"
                     src="https://i.ibb.co/XS7XpHP/e-commerce.png"
                     alt="Workflow"
@@ -46,6 +47,7 @@ export default function Navbar() {
                     src="https://i.ibb.co/XS7XpHP/e-commerce.png"
                     alt="Workflow"
                   />
+                  </Link>
                 </div>
                 <div className="hidden sm:col-span-2 sm:ml-6 sm:flex sm:space-x-8">
                   <Link
@@ -81,15 +83,15 @@ export default function Navbar() {
             <div className="pt-2 pb-3 space-y-1">
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="/"
                 className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="/cart"
                 className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
-                About Us
+                Cart
               </Disclosure.Button>
               <Disclosure.Button as="div" className="pl-3 pr-4">
                 <CartItems length={0} />

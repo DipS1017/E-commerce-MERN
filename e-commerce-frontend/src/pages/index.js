@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 import Loading from "../components/Loading";
 import Navbar from "../components/Navbar";
 import AiChatWidget from "../components/AiChatWidget";
-import HeroBanner from "../components/HeroBanner";
+
 
 function Index() {
   const { data: products, loading: isLoading } = useFetch(
@@ -15,7 +15,7 @@ function Index() {
 
   return (
     <div>
-      {/* <HeroBanner/> */}
+      
       <ProductList products={products?.data || []} />
     </div>
   );

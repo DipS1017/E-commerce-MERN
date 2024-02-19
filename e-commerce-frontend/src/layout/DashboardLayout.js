@@ -9,7 +9,7 @@ export default function DashboardLayout() {
       <div className="grid flex-grow h-full grid-cols-9 grid-rows-1">
         <nav className="h-full col-span-2 px-2 pt-4 space-y-1 bg-indigo-600">
           <div>
-            <img
+            <Link to="../"  img
               className="w-auto h-12 mx-auto mb-4 invert brightness-0"
               src="https://i.ibb.co/1s66x32/e-commerce-removebg.png"
               alt="title"
