@@ -15,7 +15,7 @@ function CartItems(props) {
 
   return (
     <>
-      <span className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent ">
+      <span className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 border-b-2 border-transparent ">
         Cart Items : {cartContext?.total}
       </span>
       <button
@@ -52,12 +52,12 @@ export default function Navbar() {
                 <div className="hidden sm:col-span-2 sm:ml-6 sm:flex sm:space-x-8">
                   <Link
                     to="/"
-                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
+                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
                     Home
                   </Link>
                   <Link
                     to="/cart"
-                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
+                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
                     Cart
                   </Link>
                 </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex items-center -mr-2 sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-700 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block w-6 h-6" aria-hidden="true" />
@@ -80,17 +80,17 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="pt-2 pb-3 space-y-1">
+            <div className="flex justify-around pt-5  space-y-1">
               <Disclosure.Button
                 as="a"
                 href="/"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
+                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-700 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="/cart"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
+                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-700 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
                 Cart
               </Disclosure.Button>
               <Disclosure.Button as="div" className="pl-3 pr-4">
