@@ -12,13 +12,13 @@ function AiChatWidget() {
     },
     onError: () => {
       addResponseMessage(`Sorry! Server is Busy.`);
-    }
+    },
   });
 
   const handleMessage = (message) => {
     setCount((count) => count + 1);
     mutate({
-      input: message
+      input: message,
     });
   };
 

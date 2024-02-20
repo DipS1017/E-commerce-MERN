@@ -80,7 +80,7 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="flex justify-around pt-5  space-y-1">
+            <div className="pt-5  space-y-1">
               <Disclosure.Button
                 as="a"
                 href="/"

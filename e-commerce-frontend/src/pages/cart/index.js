@@ -58,7 +58,7 @@ function Cart() {
                             </a>
                           </h4>
                           <p className="ml-4 text-sm font-medium text-gray-900">
-                            ${cart.productId.price}
+                            Rs.{cart.productId.price}
                           </p>
                         </div>
                         <p className="mt-1 text-sm text-gray-500">
@@ -86,7 +86,7 @@ function Cart() {
                       Subtotal
                     </dt>
                     <dd className="ml-4 text-base font-medium text-gray-900">
-                      ${getTotalPrice()}
+                      Rs.{getTotalPrice()}
                     </dd>
                   </div>
                 </dl>
