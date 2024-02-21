@@ -18,9 +18,10 @@ function CartItems(props) {
       <span className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 border-b-2 border-transparent ">
         Cart Items : {cartContext?.total}
       </span>
+      <br/>
       <button
         onClick={onLogout}
-        className="px-4 py-2 ml-2 text-sm text-white bg-indigo-600 rounded-md">
+        className="px-4 py-2 ml-2 text-sm  text-white bg-indigo-600 rounded-md">
         Logout
       </button>
     </>
@@ -35,7 +36,7 @@ export default function Navbar() {
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
             <div className="flex justify-between h-16">
               <div className="grid w-full grid-cols-8">
-                <div className="flex items-center flex-shrink-0 col-span-8 sm:col-span-1">
+                <div className="flex items-center flex-shrink-0 col-span-8 sm:col-span-1 ">
                   <Link to="/">
                   <img 
                     className="block w-auto h-8 lg:hidden"
@@ -49,7 +50,7 @@ export default function Navbar() {
                   />
                   </Link>
                 </div>
-                <div className="hidden sm:col-span-2 sm:ml-6 sm:flex sm:space-x-8">
+                <div className="hidden sm:col-span-2 sm:ml-6 sm:flex  sm:space-x-8">
                   <Link
                     to="/"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">
@@ -62,7 +63,9 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="items-center justify-end hidden sm:col-span-5 sm:flex">
+                
                   <CartItems length={0} />
+                  
                 </div>
               </div>
 
@@ -84,18 +87,20 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="/"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-700 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
+                className="flex items-center justify-center py-2 pl-3 pr-4 pt-4 border-t-gray-100  text-base font-medium text-gray-700 border-slate-50  hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 border-b-2 border-t-2 ">
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="/cart"
-                className="block py-2 pl-3 pr-4 text-base font-medium text-gray-700 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">
+                className="flex items-center justify-center py-2 pl-3 pr-4 border- text-base font-medium text-gray-700 border-slate-50 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 border-b-2 ">
                 Cart
               </Disclosure.Button>
-              <Disclosure.Button as="div" className="pl-3 pr-4">
-                <CartItems length={0} />
+              <Disclosure.Button as="div" className=" flex justify-evenly pl-3 pt-2  pr-4 ">
+              <CartItems length={0} />
               </Disclosure.Button>
+             
+              
             </div>
           </Disclosure.Panel>
         </>
