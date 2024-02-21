@@ -96,7 +96,7 @@ export default function Navbar() {
                 className="flex items-center justify-center py-2 pl-3 pr-4 border- text-base font-medium text-gray-700 border-slate-50 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 border-b-2 ">
                 Cart
               </Disclosure.Button>
-              <Disclosure.Button as="div" className=" flex justify-evenly pl-3 pt-2  pr-4 ">
+              <Disclosure.Button as="div" className=" flex justify-evenly pl-3 pt-2  pr-4 "> 
               <CartItems length={0} />
               </Disclosure.Button>
              
