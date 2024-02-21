@@ -18,6 +18,8 @@ function Cart() {
     return total;
   };
 
+  
+
   // if (loading) {
   //   return <Loading />;
   // }
